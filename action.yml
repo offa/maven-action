@@ -23,7 +23,7 @@ runs:
       uses: actions/setup-java@main
       with:
         java-version: ${{ inputs.java-version }}
-        distribution: 'adopt'
+        distribution: 'temurin'
         cache: 'maven'
     - name: 'Maven Build'
       run: mvn verify --batch-mode -Dmaven.javadoc.skip=${{ inputs.skip-javadoc }} -V --no-transfer-progress
