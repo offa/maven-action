@@ -1,0 +1,29 @@
+name: 'Java Maven Build'
+description: 'Maven build using a specific version of the Java JDK'
+author: 'offa'
+inputs:
+  java-version:
+    description: 'The Java version use'
+    required: true
+  pmd:
+    description: 'Execute PMD'
+    required: false
+    default: false
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout
+      uses: actions/checkout@main
+    - name: 'Setup jdk-${{ inputs.java-version }}'
+      uses: actions/setup-java@main
+      with:
+        java-version: ${{ inputs.java-version }}
+        distribution: 'adopt'
+        cache: 'maven'
+    - name: 'Maven Build'
+      run: mvn verify --batch-mode -Dmaven.javadoc.skip=true -V --no-transfer-progress
+      shell: bash
+    - name: 'Execute PMD'
+      run: if [[ "${{ inputs.pmd }}" = true ]]; then mvn pmd:pmd --batch-mode --no-transfer-progress; fi
+      shell: bash
