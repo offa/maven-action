@@ -1,6 +1,10 @@
 name: 'Java Maven Build'
 description: 'Maven build using a specific version of the Java JDK'
 author: 'offa'
+branding:
+  icon: 'check-circle'
+  color: 'green'
+
 inputs:
   java-version:
     description: 'The Java version use'
