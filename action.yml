@@ -9,6 +9,10 @@ inputs:
   java-version:
     description: 'The Java version use'
     required: true
+  goal:
+    description: 'Maven goal to execute'
+    required: false
+    default: 'verify'
   pmd:
     description: 'Execute PMD'
     required: false
@@ -30,7 +34,7 @@ runs:
         distribution: 'temurin'
         cache: 'maven'
     - name: 'Maven Build'
-      run: mvn verify --batch-mode -Dmaven.javadoc.skip=${{ inputs.skip-javadoc }} -V --no-transfer-progress
+      run: mvn ${{ inputs.goal }} --batch-mode -Dmaven.javadoc.skip=${{ inputs.skip-javadoc }} -V --no-transfer-progress
       shell: bash
     - name: 'Execute PMD'
       run: if [[ "${{ inputs.pmd }}" = true ]]; then mvn pmd:pmd --batch-mode --no-transfer-progress; fi
