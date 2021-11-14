@@ -37,5 +37,6 @@ runs:
       run: mvn ${{ inputs.goal }} --batch-mode -Dmaven.javadoc.skip=${{ inputs.skip-javadoc }} -V --no-transfer-progress
       shell: bash
     - name: 'Execute PMD'
-      run: if [[ "${{ inputs.pmd }}" = true ]]; then mvn pmd:pmd --batch-mode --no-transfer-progress; fi
+      if: ${{ inputs.pmd }}
+      run: mvn pmd:pmd --batch-mode --no-transfer-progress
       shell: bash
