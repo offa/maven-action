@@ -6,6 +6,8 @@ GitHub Action for Maven based Java projects.
 
 It checks out the repository, runs maven and optional analysis.
 
+Available parameters are documented in the [`action.yml`](./action.yml).
+
 ### Example
 
 Builds JDK 8, 11 and 17 and executes a PMD analysis.
