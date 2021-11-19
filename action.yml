@@ -38,7 +38,7 @@ runs:
         distribution: 'temurin'
         cache: 'maven'
     - name: 'Maven Build'
-      run: mvn ${{ inputs.goal }} --file ${{ inputs.pom }}--batch-mode -Dmaven.javadoc.skip=${{ inputs.skip-javadoc }} -V --no-transfer-progress
+      run: mvn ${{ inputs.goal }} --file ${{ inputs.pom }} --batch-mode -Dmaven.javadoc.skip=${{ inputs.skip-javadoc }} -V --no-transfer-progress
       shell: bash
     - name: 'Execute PMD'
       if: ${{ inputs.pmd }}
