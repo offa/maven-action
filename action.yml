@@ -9,6 +9,10 @@ inputs:
   java-version:
     description: 'The Java version use'
     required: true
+  pom:
+    description: 'Path to pom.xml file or directory containing one'
+    required: false
+    default: 'pom.xml'
   goal:
     description: 'Maven goal to execute'
     required: false
@@ -34,7 +38,7 @@ runs:
         distribution: 'temurin'
         cache: 'maven'
     - name: 'Maven Build'
-      run: mvn ${{ inputs.goal }} --batch-mode -Dmaven.javadoc.skip=${{ inputs.skip-javadoc }} -V --no-transfer-progress
+      run: mvn ${{ inputs.goal }} --file ${{ inputs.pom }}--batch-mode -Dmaven.javadoc.skip=${{ inputs.skip-javadoc }} -V --no-transfer-progress
       shell: bash
     - name: 'Execute PMD'
       if: ${{ inputs.pmd }}
