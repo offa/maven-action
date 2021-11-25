@@ -1,8 +1,9 @@
 # maven-action
 
+[![ci](https://github.com/offa/maven-action/actions/workflows/ci.yml/badge.svg)](https://github.com/offa/maven-action/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-GPLv3-yellow.svg)](LICENSE)
 
-GitHub Action for Maven based Java projects.
+GitHub Action for Maven based projects.
 
 It checks out the repository, runs maven and optional analysis.
 
