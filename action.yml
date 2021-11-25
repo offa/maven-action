@@ -42,5 +42,5 @@ runs:
       shell: bash
     - name: 'Execute PMD'
       if: ${{ inputs.pmd }}
-      run: mvn pmd:pmd --batch-mode --no-transfer-progress
+      run: mvn pmd:pmd --file ${{ inputs.pom }} --batch-mode --no-transfer-progress
       shell: bash
