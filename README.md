@@ -1,6 +1,7 @@
 # maven-action
 
 [![ci](https://github.com/offa/maven-action/actions/workflows/ci.yml/badge.svg)](https://github.com/offa/maven-action/actions/workflows/ci.yml)
+[![GitHub release](https://img.shields.io/github/release/offa/maven-action.svg)](https://github.com/offa/maven-action/releases)
 [![License](https://img.shields.io/badge/license-GPLv3-yellow.svg)](LICENSE)
 
 GitHub Action for Maven based projects.
