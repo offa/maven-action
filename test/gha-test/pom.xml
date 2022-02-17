@@ -42,14 +42,6 @@
                     </rulesets>
                     <linkXRef>false</linkXRef>
                 </configuration>
-                <!-- pmd/pmd#3502 / MPMD-325: Workaround for conflicting asm versions -->
-                <dependencies>
-                    <dependency>
-                        <groupId>org.ow2.asm</groupId>
-                        <artifactId>asm</artifactId>
-                        <version>9.2</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
