@@ -12,7 +12,7 @@ Available parameters are documented in the [`action.yml`](./action.yml).
 
 ### Example
 
-Builds JDK 11 and 17 and executes a PMD analysis.
+Builds JDK 17 and 21 and executes a PMD analysis.
 
 ```yml
 # […]
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [ 11, 17 ]
+        java: [ 17, 21 ]
     name: jdk-${{ matrix.java }}
     steps:
       - name: Build
