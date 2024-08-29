@@ -6,7 +6,7 @@
 
 GitHub Action for Maven based projects.
 
-It checks out the repository, runs maven and optional analysis.
+It checks out the repository, sets up Java, runs Maven and optional analysis.
 
 ### Example
 
