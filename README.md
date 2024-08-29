@@ -10,7 +10,15 @@ It checks out the repository, runs maven and optional analysis.
 
 ### Example
 
-Builds JDK 17 and 21 and executes a PMD analysis.
+Minimal example:
+
+```yml
+- uses: offa/maven-action@main
+  with:
+    java-version: '21'
+```
+
+Builds JDK 17 and 21 and executes a PMD analysis:
 
 ```yml
 # […]
