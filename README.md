@@ -8,8 +8,6 @@ GitHub Action for Maven based projects.
 
 It checks out the repository, runs maven and optional analysis.
 
-Available parameters are documented in the [`action.yml`](./action.yml).
-
 ### Example
 
 Builds JDK 17 and 21 and executes a PMD analysis.
@@ -30,4 +28,27 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
           pmd: true
+```
+
+### Usage
+
+`java-version` is required, all other settings are optional with defaults
+
+```yml
+- uses: offa/maven-action@main
+  with:
+    # Java version to use (required) - whole or semver Java version
+    java-version: # Required
+
+    # Path to pom.xml file or directory containing one
+    pom: 'pom.xml'
+
+    # Maven goal to execute
+    goal: 'verify'
+
+    # Execute PMD goal (runs after 'goal')
+    pmd: false
+
+    # Skips JavaDoc generation
+    skip-javadoc: true
 ```
