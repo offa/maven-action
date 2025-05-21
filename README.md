@@ -8,12 +8,18 @@ GitHub Action for Maven based projects.
 
 It checks out the repository, sets up Java, runs Maven and optional analysis.
 
-### Example
+### Recommendation
+
+Instead of using a tag or branch, pinning to a full-length commit is recommended.
+[Dependabot](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot) helps to keep GH Actions up to date.
+
+### Examples
 
 Minimal example:
 
 ```yml
-- uses: offa/maven-action@main
+# Replace '<commit>' with the latest commit on main
+- uses: offa/maven-action@<commit>
   with:
     java-version: '21'
 ```
@@ -32,7 +38,7 @@ jobs:
     name: jdk-${{ matrix.java }}
     steps:
       - name: Build
-        uses: offa/maven-action@main
+        uses: offa/maven-action@<commit>
         with:
           java-version: ${{ matrix.java }}
           pmd: true
@@ -43,7 +49,8 @@ jobs:
 `java-version` is required, all other settings are optional with defaults
 
 ```yml
-- uses: offa/maven-action@main
+# Replace '<commit>' the the current main commit
+- uses: offa/maven-action@<commit>
   with:
     # Java version to use (required) - whole or semver Java version
     java-version: # Required
