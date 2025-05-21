@@ -18,7 +18,7 @@ Instead of using a tag or branch, pinning to a full-length commit is recommended
 Minimal example:
 
 ```yml
-# Replace '<commit>' with the latest commit on main
+# Replace '<commit>' with the commit of the latest release
 - uses: offa/maven-action@<commit>
   with:
     java-version: '21'
@@ -49,7 +49,7 @@ jobs:
 `java-version` is required, all other settings are optional with defaults
 
 ```yml
-# Replace '<commit>' the the current main commit
+# Replace '<commit>' with the commit of the latest release
 - uses: offa/maven-action@<commit>
   with:
     # Java version to use (required) - whole or semver Java version
