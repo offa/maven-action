@@ -8,6 +8,11 @@ GitHub Action for Maven based projects.
 
 It checks out the repository, sets up Java, runs Maven and optional analysis.
 
+1. Git Checkout
+1. Java and Maven setup
+1. Run Maven Goal 
+1. PMD analysis *(optional)*
+
 ### Recommendation
 
 Instead of using a tag or branch, pinning to a full-length commit is recommended.
