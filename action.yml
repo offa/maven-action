@@ -40,7 +40,7 @@ runs:
     - name: 'Setup Maven'
       uses: stCarolas/setup-maven@v5
       with:
-        maven-version: 3.9.9
+        maven-version: 3.9.10
     - name: 'Maven Build'
       run: mvn ${{ inputs.goal }} --file ${{ inputs.pom }} --batch-mode -Dmaven.javadoc.skip=${{ inputs.skip-javadoc }} -V --no-transfer-progress
       shell: bash
