@@ -10,7 +10,7 @@ It checks out the repository, sets up Java, runs Maven and optional analysis.
 
 1. Git Checkout
 1. Java and Maven setup
-1. Run Maven Goal 
+1. Run Maven Goal
 1. PMD analysis *(optional)*
 
 ### Recommendation
