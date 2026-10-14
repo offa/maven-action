@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/offa/maven-action.svg)](https://github.com/offa/maven-action/releases)
 [![License](https://img.shields.io/badge/license-GPLv3-yellow.svg)](LICENSE)
 
-GitHub Action for Maven based projects.
+GitHub Action for Maven-based projects.
 
 It checks out the repository, sets up Java, runs Maven and optional analysis.
 
@@ -16,7 +16,7 @@ It checks out the repository, sets up Java, runs Maven and optional analysis.
 ### Recommendation
 
 Instead of using a tag or branch, pinning to a full-length commit is recommended.
-[Dependabot](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot) helps to keep GH Actions up to date.
+[Dependabot](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot) helps to keep GitHub Actions up to date.
 
 ### Examples
 
@@ -29,7 +29,7 @@ Minimal example:
     java-version: '21'
 ```
 
-Builds JDK 17 and 21 and executes a PMD analysis:
+Builds with JDK 17 and 21 and executes a PMD analysis:
 
 ```yml
 # […]
